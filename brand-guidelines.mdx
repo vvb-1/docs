@@ -30,10 +30,13 @@ Use the guide below to select the correct file for your specific context. Using 
 
 <CardGroup cols={2}>
   <Card title="Documents & PDFs" icon="file">
-    Use the horizontal logo variant:
+    Use the horizontal logo variant. For raster output (Word, PowerPoint, PDF export):
     `04b-main-logo-horisontell-liten-ren_4x.png`
 
-    Optimised for wide, low-height spaces typical of document headers and footers.
+    For vector output (Illustrator, InDesign, scalable SVG embedding):
+    `04b-main-logo-horisontell-liten-ren.svg`
+
+    Both are optimised for wide, low-height spaces typical of document headers and footers.
   </Card>
   <Card title="Web / App Large Display" icon="display" >
     Use the main logo:
@@ -52,7 +55,7 @@ Use the guide below to select the correct file for your specific context. Using 
     Required for home screen bookmarks and iOS web-app icons on all Apple devices.
   </Card>
   <Card title="Android / PWA" icon="android">
-    Use `android-chrome-192x192.png` for standard resolution and `android-chrome-512x512.png` for high-DPI displays and PWA splash screens.
+    Use `android-chrome-192x192.png` for standard resolution and `android-chrome-512x512.png` for high-DPI displays and PWA splash screens. Register `site.webmanifest` in your HTML `<head>` to declare the app name, icons, and brand `theme_color` (`#E31E2D`) to Android and PWA-capable browsers.
   </Card>
 </CardGroup>
 
