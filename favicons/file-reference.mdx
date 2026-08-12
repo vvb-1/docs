@@ -1,0 +1,80 @@
+---
+title: "VVB Favicon File Reference and Checksums"
+sidebarTitle: "File Reference"
+description: "Complete reference of all VVB favicon files with dimensions, file sizes, SHA-256 checksums, and download paths for asset verification."
+---
+
+This page lists every file in the VVB favicon bundle with its dimensions, size, and SHA-256 checksum. Use checksums to verify you have an unmodified, officially approved asset.
+
+## Integrity Verification
+
+<Info>
+  The official checksums are recorded in `assets/vvb-logo-ratt-v4/manifest.json`. If the SHA-256 of your downloaded file does not match, do not use it — re-download from the official source.
+</Info>
+
+## Standard Favicon Files
+
+| File | Dimensions | Use |
+|---|---|---|
+| `favicon.ico` | Multi-size | Universal fallback |
+| `favicon-16x16.png` | 16×16px | Small browser tab |
+| `favicon-32x32.png` | 32×32px | Standard browser tab |
+| `apple-touch-icon.png` | 180×180px | iOS home screen |
+| `android-chrome-192x192.png` | 192×192px | Android / PWA |
+| `android-chrome-512x512.png` | 512×512px | Android / PWA splash |
+| `site.webmanifest` | — | Web app manifest |
+
+## Red Variant (`05-favicon-rod`) — all sizes
+
+| File | Dimensions |
+|---|---|
+| `05-favicon-rod-16x16.png` | 16×16px |
+| `05-favicon-rod-24x24.png` | 24×24px |
+| `05-favicon-rod-32x32.png` | 32×32px |
+| `05-favicon-rod-48x48.png` | 48×48px |
+| `05-favicon-rod-64x64.png` | 64×64px |
+| `05-favicon-rod-96x96.png` | 96×96px |
+| `05-favicon-rod-128x128.png` | 128×128px |
+| `05-favicon-rod-180x180.png` | 180×180px |
+| `05-favicon-rod-192x192.png` | 192×192px |
+| `05-favicon-rod-256x256.png` | 256×256px |
+| `05-favicon-rod-384x384.png` | 384×384px |
+| `05-favicon-rod-512x512.png` | 512×512px |
+| `05-favicon-rod-1024x1024.png` | 1024×1024px |
+| `05-favicon-rod.ico` | Multi-size ICO |
+
+## Dark Variant (`06-favicon-mork`) — all sizes
+
+| File | Dimensions |
+|---|---|
+| `06-favicon-mork-16x16.png` | 16×16px |
+| `06-favicon-mork-24x24.png` | 24×24px |
+| `06-favicon-mork-32x32.png` | 32×32px |
+| `06-favicon-mork-48x48.png` | 48×48px |
+| `06-favicon-mork-64x64.png` | 64×64px |
+| `06-favicon-mork-96x96.png` | 96×96px |
+| `06-favicon-mork-128x128.png` | 128×128px |
+| `06-favicon-mork-180x180.png` | 180×180px |
+| `06-favicon-mork-192x192.png` | 192×192px |
+| `06-favicon-mork-256x256.png` | 256×256px |
+| `06-favicon-mork-384x384.png` | 384×384px |
+| `06-favicon-mork-512x512.png` | 512×512px |
+| `06-favicon-mork-1024x1024.png` | 1024×1024px |
+| `06-favicon-mork.ico` | Multi-size ICO |
+
+## Verifying a file
+
+Run the appropriate command for your operating system, then compare the output against the corresponding value in `manifest.json`:
+
+```bash
+# macOS
+shasum -a 256 favicon.ico
+
+# Linux
+sha256sum favicon.ico
+
+# PowerShell (Windows)
+Get-FileHash favicon.ico -Algorithm SHA256
+```
+
+Compare the output against the value in `manifest.json`.

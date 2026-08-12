@@ -1,0 +1,85 @@
+---
+title: "VVB Brand Guidelines: Rules for Logo and Identity Use"
+sidebarTitle: "Brand Guidelines"
+description: "Official rules for using Vi Vet Bil AB logos, favicons, and brand assets consistently across documents, websites, and applications."
+---
+
+These guidelines exist to ensure that **Vi Vet Bil AB (VVB)** is represented consistently and professionally across every medium and context. All VVB projects — including web applications, mobile apps, PDFs, presentations, and internal documents — must follow the rules set out on this page. Consistent use of approved assets builds trust, reinforces recognition, and protects the integrity of the VVB brand.
+
+---
+
+## The Golden Rule
+
+<Warning>
+  Automated tools and designers must **NOT** redesign or modify VVB logos in any way. Always use the exact approved assets provided in this library. If a new variant is needed for a specific context that is not already covered, raise a separate design request and obtain approval **before** creating or publishing it.
+</Warning>
+
+---
+
+## Current Approved Asset Set
+
+The current approved standard for all VVB brand assets is **`vvb-logo-ratt-v4`**, approved as of **June 2026**. All projects — new and existing — should source their logo and favicon files exclusively from this set. Assets from earlier versions are considered deprecated and must not be used in any new or updated materials.
+
+If you are unsure whether an asset you have on hand belongs to the approved set, verify its SHA-256 checksum against the values recorded in `manifest.json` (see [Asset Integrity](#asset-integrity) below).
+
+---
+
+## Choosing the Right Asset
+
+Use the guide below to select the correct file for your specific context. Using the wrong variant (for example, a high-resolution display logo in a favicon slot) can result in poor rendering quality or layout issues.
+
+<CardGroup cols={2}>
+  <Card title="Documents & PDFs" icon="file">
+    Use the horizontal logo variant:
+    `04b-main-logo-horisontell-liten-ren_4x.png`
+
+    Optimised for wide, low-height spaces typical of document headers and footers.
+  </Card>
+  <Card title="Web / App Large Display" icon="display" >
+    Use the main logo:
+    `01-main-logo-stor_4x.png`
+
+    Ideal for hero sections, splash screens, and any large-format digital display.
+  </Card>
+  <Card title="Browser Favicon" icon="browser">
+    Use `favicon.ico` from the favicons folder.
+
+    Compatible with all major browsers and provides a crisp 16×16 and 32×32 rendering.
+  </Card>
+  <Card title="Apple / iOS" icon="apple">
+    Use `apple-touch-icon.png`.
+
+    Required for home screen bookmarks and iOS web-app icons on all Apple devices.
+  </Card>
+  <Card title="Android / PWA" icon="android">
+    Use `android-chrome-192x192.png` for standard resolution and `android-chrome-512x512.png` for high-DPI displays and PWA splash screens.
+  </Card>
+</CardGroup>
+
+---
+
+## Brand Colors
+
+The primary VVB brand color is **red — `#E31E2D`**. This is the exact hue used throughout the VVB logo and is also specified as the `theme_color` in the web app manifest, ensuring that browser chrome and PWA title bars reflect the correct brand color on supporting platforms.
+
+When producing materials that incorporate brand colors, always reference `#E31E2D` directly rather than approximating by eye. Do not substitute similar reds or use platform-default colors in place of the approved brand red.
+
+---
+
+## What NOT to Do
+
+<Accordion title="Prohibited logo modifications and misuses">
+  - **Do not stretch or distort the logo.** Always maintain the original aspect ratio when scaling. Use constrained scaling handles and never resize width and height independently.
+  - **Do not recolor the logo.** The approved assets must be used as supplied. Do not apply color filters, overlays, or CSS `filter` properties that alter the logo's colors.
+  - **Do not place the logo on backgrounds that reduce legibility.** Avoid busy photographic backgrounds, low-contrast color combinations, or any backdrop that makes the logo hard to read. Use a clear, high-contrast background or the provided transparent variants where available.
+  - **Do not recreate the logo in a different typeface or style.** The VVB wordmark and logomark are fixed graphical assets — they are not to be redrawn, typeset from scratch, or approximated in other design tools.
+  - **Do not use outdated logo versions.** Only assets from the current approved set (`vvb-logo-ratt-v4`) may be used. Retire and replace any older variants found in existing materials at the next available opportunity.
+</Accordion>
+
+---
+
+## Asset Integrity
+
+<Info>
+  Every approved asset has a **SHA-256 checksum** recorded in the `manifest.json` file included in the asset package. If you need to confirm that a file has not been altered — whether accidentally or intentionally — compute its SHA-256 hash and compare it against the value listed in the manifest. A mismatch indicates the file has been modified and it must not be used until replaced with a verified copy from the official library.
+</Info>

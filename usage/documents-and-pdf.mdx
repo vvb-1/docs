@@ -1,0 +1,74 @@
+---
+title: "Use VVB Logos in PDF Documents and Reports"
+sidebarTitle: "Documents & PDFs"
+description: "Instructions for embedding the official VVB horizontal logo in PDF documents, reports, and printed materials using raw GitHub URLs or local files."
+---
+
+When creating VVB-branded documents, reports, presentations, or printed materials, use the approved horizontal logo for headers and the main logo for cover pages. This guide covers the recommended files and how to embed them in your documents.
+
+## Recommended Logo for Documents
+
+Choosing the right logo variant ensures your documents look polished and on-brand:
+
+- **Document headers and footers** — use the horizontal logo (`04b-main-logo-horisontell-liten-ren_4x.png`). Its wide, compact format fits naturally in header rows without occupying excessive vertical space.
+- **Cover pages and prominent placements** — use the main logo (`01-main-logo-stor_4x.png`). The larger format and square composition make a strong visual statement at the top of a report or presentation.
+
+## Using Raw GitHub URLs
+
+PDF renderers and document tools that require a publicly accessible image URL should use `raw.githubusercontent.com` links. These URLs serve the file directly from the repository without any redirect or wrapper page.
+
+```
+# Horizontal logo (recommended for PDF headers)
+https://raw.githubusercontent.com/vvb-1/vvb-brand-assets/main/assets/vvb-logo-ratt-v4/logos/04b-main-logo-horisontell-liten-ren_4x.png
+
+# Main logo (for cover pages)
+https://raw.githubusercontent.com/vvb-1/vvb-brand-assets/main/assets/vvb-logo-ratt-v4/logos/01-main-logo-stor_4x.png
+```
+
+## Platform Examples
+
+<Tabs>
+  <Tab title="HTML/CSS PDF">
+    Use a standard `<img>` tag with the raw GitHub URL. Tools such as WeasyPrint, Puppeteer, and wkhtmltopdf can fetch this URL at render time.
+
+    ```html
+    <img
+      src="https://raw.githubusercontent.com/vvb-1/vvb-brand-assets/main/assets/vvb-logo-ratt-v4/logos/04b-main-logo-horisontell-liten-ren_4x.png"
+      alt="Vi Vet Bil AB"
+      width="200"
+    />
+    ```
+  </Tab>
+  <Tab title="Markdown">
+    Use standard Markdown image syntax with the raw GitHub URL. This works in Markdown-based document generators, README files, and static site builders that output PDFs.
+
+    ```markdown
+    ![Vi Vet Bil AB](https://raw.githubusercontent.com/vvb-1/vvb-brand-assets/main/assets/vvb-logo-ratt-v4/logos/04b-main-logo-horisontell-liten-ren_4x.png)
+    ```
+  </Tab>
+  <Tab title="Word/Google Docs">
+    Both Microsoft Word and Google Docs support inserting images from a URL:
+
+    1. Open **Insert** in the menu bar.
+    2. Select **Image** → **From URL** (Google Docs) or **Online Pictures** (Word).
+    3. Paste the raw GitHub PNG URL:
+       ```
+       https://raw.githubusercontent.com/vvb-1/vvb-brand-assets/main/assets/vvb-logo-ratt-v4/logos/04b-main-logo-horisontell-liten-ren_4x.png
+       ```
+    4. Confirm the insertion and resize the image to fit your header or cover page layout.
+
+    > **Tip:** After inserting via URL, save a local copy of the image in the document to avoid broken images if the URL ever changes.
+  </Tab>
+</Tabs>
+
+## Sizing Guidelines
+
+Apply these dimensions to keep the logo legible and proportionate across document formats:
+
+- **PDF header / page header:** ~200–280 px wide is recommended. This keeps the logo prominent without crowding header text or page numbers.
+- **Cover page:** Use the full-size or 4× version (`_4x.png`) to ensure crisp rendering at large print sizes.
+- **Clear space:** Maintain a minimum clear space around the logo equal to the height of the **V** in VVB on all sides. Do not place other text, graphics, or borders inside this exclusion zone.
+
+<Warning>
+  Do not modify the logo colors or proportions. Use the files exactly as provided. Stretching, recoloring, or overlaying the logo violates VVB brand guidelines.
+</Warning>

@@ -1,0 +1,68 @@
+---
+title: "VVB Asset Raw GitHub URLs for External Renderers"
+sidebarTitle: "Raw URLs"
+description: "Complete list of raw.githubusercontent.com URLs for all VVB logo and favicon files, ready to use in PDF renderers, email templates, and external tools."
+---
+
+Some tools — PDF renderers, email clients, no-code platforms, and third-party integrations — require publicly accessible image URLs rather than local file paths. Use these raw GitHub URLs to reference VVB brand assets directly without hosting them yourself.
+
+<Note>
+  These URLs resolve directly from the GitHub repository. They are suitable for documents, prototypes, and external tools. For high-traffic production web applications, self-host the assets instead.
+</Note>
+
+## Logos
+
+```
+# Main logo — large (PNG 4×)
+https://raw.githubusercontent.com/vvb-1/vvb-brand-assets/main/assets/vvb-logo-ratt-v4/logos/01-main-logo-stor_4x.png
+
+# Main logo — large (SVG)
+https://raw.githubusercontent.com/vvb-1/vvb-brand-assets/main/assets/vvb-logo-ratt-v4/logos/01-main-logo-stor.svg
+
+# Horizontal logo — small clean (PNG 4×) [RECOMMENDED FOR PDF HEADERS]
+https://raw.githubusercontent.com/vvb-1/vvb-brand-assets/main/assets/vvb-logo-ratt-v4/logos/04b-main-logo-horisontell-liten-ren_4x.png
+
+# Horizontal logo — small clean (SVG)
+https://raw.githubusercontent.com/vvb-1/vvb-brand-assets/main/assets/vvb-logo-ratt-v4/logos/04b-main-logo-horisontell-liten-ren.svg
+
+# Favicon icon — red (SVG)
+https://raw.githubusercontent.com/vvb-1/vvb-brand-assets/main/assets/vvb-logo-ratt-v4/logos/05-favicon-rod.svg
+
+# Favicon icon — dark (SVG)
+https://raw.githubusercontent.com/vvb-1/vvb-brand-assets/main/assets/vvb-logo-ratt-v4/logos/06-favicon-mork.svg
+```
+
+## Favicons
+
+```
+# Standard favicon files
+https://raw.githubusercontent.com/vvb-1/vvb-brand-assets/main/assets/vvb-logo-ratt-v4/favicons/favicon.ico
+https://raw.githubusercontent.com/vvb-1/vvb-brand-assets/main/assets/vvb-logo-ratt-v4/favicons/favicon-16x16.png
+https://raw.githubusercontent.com/vvb-1/vvb-brand-assets/main/assets/vvb-logo-ratt-v4/favicons/favicon-32x32.png
+https://raw.githubusercontent.com/vvb-1/vvb-brand-assets/main/assets/vvb-logo-ratt-v4/favicons/apple-touch-icon.png
+https://raw.githubusercontent.com/vvb-1/vvb-brand-assets/main/assets/vvb-logo-ratt-v4/favicons/android-chrome-192x192.png
+https://raw.githubusercontent.com/vvb-1/vvb-brand-assets/main/assets/vvb-logo-ratt-v4/favicons/android-chrome-512x512.png
+```
+
+## Manifest
+
+```
+# Asset manifest with checksums
+https://raw.githubusercontent.com/vvb-1/vvb-brand-assets/main/assets/vvb-logo-ratt-v4/manifest.json
+```
+
+## Using a URL in HTML
+
+Paste any URL from the lists above directly into an `<img>` tag. The example below uses the recommended horizontal logo:
+
+```html
+<img
+  src="https://raw.githubusercontent.com/vvb-1/vvb-brand-assets/main/assets/vvb-logo-ratt-v4/logos/04b-main-logo-horisontell-liten-ren_4x.png"
+  alt="Vi Vet Bil AB"
+  width="200"
+/>
+```
+
+<Warning>
+  Do not hotlink these URLs in production web applications with significant traffic. GitHub's raw CDN is not intended for high-volume image serving. Download and self-host the files for production use.
+</Warning>

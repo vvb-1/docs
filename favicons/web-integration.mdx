@@ -1,0 +1,125 @@
+---
+title: "Add VVB Favicons to Your Website or Web App"
+sidebarTitle: "Web Integration"
+description: "Step-by-step instructions for integrating the VVB favicon bundle into your website's HTML, including the complete HTML head snippet and web manifest setup."
+---
+
+To display the VVB brand icon in browser tabs and on device home screens, add the favicon files to your project and include the appropriate link tags in your HTML `<head>`. The VVB favicon bundle includes everything you need.
+
+## HTML Head Snippet
+
+Add the following tags inside the `<head>` element of every page on your site:
+
+```html
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#E31E2D">
+```
+
+## Setup Steps
+
+<Steps>
+  <Step title="Copy favicon files">
+    Copy all files from the `assets/vvb-logo-ratt-v4/favicons/` folder to the root of your web project (or your static assets directory).
+  </Step>
+  <Step title="Add HTML tags">
+    Paste the HTML snippet above into your website's `<head>` section, adjusting paths if your assets are not at the root.
+  </Step>
+  <Step title="Add the web manifest">
+    Ensure `site.webmanifest` is accessible at `/site.webmanifest`. Its content references `android-chrome-192x192.png` and `android-chrome-512x512.png`.
+  </Step>
+  <Step title="Verify">
+    Open your site in a browser and confirm the VVB icon appears in the browser tab.
+  </Step>
+</Steps>
+
+## Web Manifest
+
+The `site.webmanifest` file should be placed at the root of your web project. Its contents are:
+
+```json
+{
+  "name": "Vi Vet Bil AB",
+  "short_name": "Vi Vet Bil",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#E31E2D",
+  "background_color": "#0B0B0B",
+  "display": "standalone"
+}
+```
+
+## Framework-specific notes
+
+<Tabs>
+  <Tab title="Next.js">
+    Place all favicon files in the `public/` directory at the root of your Next.js project. They will be served automatically at the root path (e.g. `/favicon.ico`).
+
+    You can add the head tags via the **Next.js Metadata API** (App Router) in your root `layout.tsx`:
+
+    ```tsx
+    export const metadata = {
+      icons: {
+        icon: [
+          { url: '/favicon.ico', sizes: 'any' },
+          { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+          { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+        ],
+        apple: [{ url: '/apple-touch-icon.png', sizes: '180x180' }],
+      },
+      manifest: '/site.webmanifest',
+    }
+    ```
+
+    Alternatively, for the Pages Router, add the tags directly inside the `<Head>` component in `pages/_document.tsx`.
+  </Tab>
+  <Tab title="Vite / React">
+    Place all favicon files in the `public/` directory at the root of your Vite project. Vite serves the `public/` folder at the root URL, so no path adjustments are needed.
+
+    Add the HTML snippet directly into the `<head>` of your `index.html`:
+
+    ```html
+    <head>
+      <link rel="icon" href="/favicon.ico" sizes="any">
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+      <link rel="manifest" href="/site.webmanifest">
+      <meta name="theme-color" content="#E31E2D">
+    </head>
+    ```
+  </Tab>
+  <Tab title="Static HTML">
+    Place all favicon files at the web root of your server (the same directory as your `index.html`). No build tooling is required.
+
+    Paste the HTML snippet directly into the `<head>` of each HTML file:
+
+    ```html
+    <head>
+      <link rel="icon" href="/favicon.ico" sizes="any">
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+      <link rel="manifest" href="/site.webmanifest">
+      <meta name="theme-color" content="#E31E2D">
+    </head>
+    ```
+  </Tab>
+</Tabs>
+
+<Note>
+  The `theme-color` meta tag is set to `#E31E2D` (VVB brand red). This controls the browser chrome color on mobile devices.
+</Note>

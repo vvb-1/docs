@@ -1,0 +1,94 @@
+---
+title: "Integrate VVB Brand Assets in Websites and Apps"
+sidebarTitle: "Web & Apps"
+description: "How to use VVB logos and favicons in websites, web applications, and mobile apps — with code examples for HTML, React, and Next.js."
+---
+
+Integrating VVB branding into your web project requires choosing the right asset for each context. This guide walks through logo and favicon integration for websites and applications.
+
+## Favicon Integration
+
+For complete favicon setup instructions, see the [Web Favicon Integration guide](/favicons/web-integration). In summary:
+
+1. Copy the favicon files from the repository into your project's `public/` directory.
+2. Add the HTML `<head>` snippet provided in that guide to every page of your site.
+
+The favicon files include `.ico`, `16×16`, `32×32`, Apple Touch Icon, and Android Chrome sizes — everything needed for full browser and device coverage.
+
+## Logo Integration
+
+<Tabs>
+  <Tab title="HTML">
+    Use standard `<img>` tags referencing your locally hosted SVG files. Serving from your own domain is recommended for production sites.
+
+    ```html
+    <!-- Horizontal logo for header nav -->
+    <img
+      src="/assets/04b-main-logo-horisontell-liten-ren.svg"
+      alt="Vi Vet Bil AB"
+      height="40"
+    />
+
+    <!-- Main logo for hero/splash -->
+    <img
+      src="/assets/01-main-logo-stor.svg"
+      alt="Vi Vet Bil AB"
+      width="300"
+    />
+    ```
+  </Tab>
+  <Tab title="React">
+    Import or reference the SVG directly in your component. Adjust the inline style or CSS class to match your design system.
+
+    ```jsx
+    // Navigation bar logo
+    <img
+      src="/assets/04b-main-logo-horisontell-liten-ren.svg"
+      alt="Vi Vet Bil AB"
+      style={{ height: '40px' }}
+    />
+    ```
+  </Tab>
+  <Tab title="Next.js">
+    Use the built-in `next/image` component for automatic optimization, lazy loading, and layout shift prevention.
+
+    ```jsx
+    import Image from 'next/image';
+
+    // In your layout or header component
+    <Image
+      src="/assets/04b-main-logo-horisontell-liten-ren.svg"
+      alt="Vi Vet Bil AB"
+      width={200}
+      height={40}
+      priority
+    />
+    ```
+
+    Setting `priority` on the header logo prevents it from being lazy-loaded, which eliminates a flash of missing logo on first paint.
+  </Tab>
+</Tabs>
+
+## Asset Hosting
+
+Choose the hosting approach that fits your project's stage and traffic expectations:
+
+- **Self-hosted (recommended for production):** Copy the files from the repository into your project's static assets folder (e.g., `public/assets/`). This gives you full control over availability, caching headers, and load performance. It is the correct approach for any live, user-facing application.
+
+- **Raw GitHub CDN (prototypes and external tools):** You can reference assets directly via `raw.githubusercontent.com` URLs without downloading anything. This is convenient for quick prototypes, internal tools, or third-party integrations. Use the base path below and append the filename you need:
+
+  ```
+  https://raw.githubusercontent.com/vvb-1/vvb-brand-assets/main/assets/vvb-logo-ratt-v4/logos/
+  ```
+
+  > **Note:** This approach is not recommended for high-traffic production use. See [Raw URLs](/usage/raw-urls) for the full list of available asset URLs.
+
+## SVG vs PNG
+
+<Info>
+  Use **SVG files** for all digital and screen use — they scale perfectly at any resolution and keep file sizes small. Use the **4× PNG files** (`_4x.png`) when SVG is not supported, such as in some email clients or older PDF generation tools.
+</Info>
+
+<Tip>
+  Always set a meaningful `alt` text of `"Vi Vet Bil AB"` on logo images for accessibility and SEO. Screen readers and search engines rely on this text to understand the image content.
+</Tip>

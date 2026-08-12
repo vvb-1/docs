@@ -1,72 +1,41 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
-  "name": "Mintlify Starter Kit",
+  "name": "VVB Brand Assets",
+  "theme": "willow",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#7c7c7c",
+    "light": "#c6c5c6",
+    "dark": "#0b0a10"
+  },
+  "logo": {
+    "light": "https://media.brand.dev/82077853-7fd0-486e-bad3-9772ec81d3fd.png",
+    "dark": "https://media.brand.dev/82077853-7fd0-486e-bad3-9772ec81d3fd.png"
   },
   "favicon": "/favicon.svg",
   "navigation": {
-    "pages": [
+    "groups": [
       {
-        "group": "Getting Started",
-        "pages": [
-          "index",
-          "quickstart"
-        ]
-      }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
-  },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
-  },
-  "navbar": {
-    "links": [
+        "group": "Overview",
+        "pages": ["index", "brand-guidelines"]
+      },
       {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "group": "Logos",
+        "pages": ["logos/overview", "logos/main-logo", "logos/horizontal-logo", "logos/favicon-variants"]
+      },
+      {
+        "group": "Favicons",
+        "pages": ["favicons/overview", "favicons/web-integration", "favicons/file-reference"]
+      },
+      {
+        "group": "Usage",
+        "pages": ["usage/documents-and-pdf", "usage/web-and-apps", "usage/raw-urls"]
       }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Dashboard",
-      "href": "https://app.mintlify.com"
-    }
-  },
-  "contextual": {
-    "options": [
-      "copy",
-      "view",
-      "chatgpt",
-      "claude",
-      "perplexity",
-      "mcp",
-      "cursor",
-      "vscode"
     ]
   },
-  "footer": {
-    "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+  "navbar": {
+    "primary": {
+      "type": "github",
+      "href": "https://github.com/vvb-1/vvb-brand-assets"
     }
   }
 }

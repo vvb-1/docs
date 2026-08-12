@@ -1,0 +1,50 @@
+{
+  "projectType": "general",
+  "projectName": "VVB Brand Assets",
+  "projectDescription": "Official Vi Vet Bil AB brand asset library — approved logos, favicons, and usage guidelines for consistent branding across all VVB documents, apps, and web projects.",
+  "theme": "willow",
+  "primaryColor": "#7c7c7c",
+  "lightColor": "#0b0a10",
+  "darkColor": "#c6c5c6",
+  "navigation": {
+    "groups": [
+      {
+        "group": "Overview",
+        "pages": ["introduction", "brand-guidelines"]
+      },
+      {
+        "group": "Logos",
+        "pages": ["logos/overview", "logos/main-logo", "logos/horizontal-logo", "logos/favicon-variants"]
+      },
+      {
+        "group": "Favicons",
+        "pages": ["favicons/overview", "favicons/web-integration", "favicons/file-reference"]
+      },
+      {
+        "group": "Usage",
+        "pages": ["usage/documents-and-pdf", "usage/web-and-apps", "usage/raw-urls"]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Approved VVB logo set (main, horizontal, favicon variants)",
+    "Multi-resolution favicon bundle (16px–1024px)",
+    "Dark and light favicon variants",
+    "PDF/document header logo",
+    "Apple touch icon and web manifest",
+    "Raw GitHub CDN URLs for external renderers",
+    "SHA-256 checksums for asset integrity verification",
+    "Usage rules to prevent unauthorized redesigns"
+  ],
+  "publicApiSurface": [
+    "assets/vvb-logo-ratt-v4/logos/01-main-logo-stor_4x.png",
+    "assets/vvb-logo-ratt-v4/logos/04b-main-logo-horisontell-liten-ren_4x.png",
+    "assets/vvb-logo-ratt-v4/logos/04b-main-logo-horisontell-liten-ren.svg",
+    "assets/vvb-logo-ratt-v4/favicons/favicon.ico",
+    "assets/vvb-logo-ratt-v4/favicons/apple-touch-icon.png",
+    "assets/vvb-logo-ratt-v4/favicons/site.webmanifest",
+    "assets/vvb-logo-ratt-v4/favicons/android-chrome-192x192.png",
+    "assets/vvb-logo-ratt-v4/favicons/android-chrome-512x512.png",
+    "assets/vvb-logo-ratt-v4/manifest.json"
+  ]
+}
